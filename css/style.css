@@ -1382,19 +1382,38 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 9999;
     background: var(--color-bg);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav__links.open {
     display: flex;
   }
 
+  .nav__links a {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+
   .nav__toggle {
     display: flex;
+    z-index: 10001;
+  }
+
+  .nav__toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav__toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .about-split,
