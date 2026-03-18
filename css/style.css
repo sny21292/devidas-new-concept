@@ -1375,14 +1375,19 @@ a:hover {
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
+  .nav.nav--open {
+    height: 100vh;
+    height: 100dvh;
+    align-items: flex-start;
+  }
+
   .nav__links {
     display: none;
-    position: fixed;
+    position: absolute;
     top: var(--nav-height);
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
     background: var(--color-bg);
     flex-direction: column;
     align-items: center;
@@ -1390,6 +1395,11 @@ a:hover {
     gap: var(--space-lg);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .nav.nav--open .nav__links {
+    position: fixed;
+    bottom: 0;
   }
 
   .nav__links.open {
@@ -1403,7 +1413,6 @@ a:hover {
 
   .nav__toggle {
     display: flex;
-    z-index: 10001;
   }
 
   .nav__toggle.active span:nth-child(1) {

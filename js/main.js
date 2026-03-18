@@ -5,15 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav__links');
 
   if (toggle) {
+    const nav = toggle.closest('.nav');
     toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
       toggle.classList.toggle('active');
+      nav.classList.toggle('nav--open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         toggle.classList.remove('active');
+        nav.classList.remove('nav--open');
+        document.body.style.overflow = '';
       });
     });
   }
