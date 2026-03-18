@@ -10,10 +10,11 @@ const CATEGORIES = [
     ]
   },
   {
-    id: "cross-pendants",
-    label: "Cross Pendants",
+    id: "religious",
+    label: "Religious Jewelry",
     subcategories: [
-      { id: "cross", label: "Cross" }
+      { id: "cross", label: "Cross" },
+      { id: "gospel-necklace", label: "Gospel Necklace" }
     ]
   },
   {
@@ -281,50 +282,58 @@ const PRODUCTS = [
     image: "images/Ladies_Rings/933-301/D.png"
   },
 
-  // Cross Pendants
+  // Religious Jewelry — Cross
   {
-    style: "113-334",
-    name: "Black & White Diamond Cross Pendant",
-    category: "cross-pendants",
-    subcategory: "cross",
-    description: "Pendant measures approximately 1.8 inches tall. Pictured with 85 black diamonds and 53 white diamonds for a total of 138 diamonds weighing 1.25 carats. Can be made with any combination of gemstones.",
-    metals: "Silver, Gold, Platinum",
-    sizes: "",
-    karats: "",
-    image: "images/Cross%20Pendants/113-334/C.png"
-  },
-  {
-    style: "117-326",
+    style: "230-103",
     name: "Dogwood Flower Cross Pendant",
-    category: "cross-pendants",
+    category: "religious",
     subcategory: "cross",
     description: "This exquisite sterling silver cross pendant draws inspiration from the beauty of the Dogwood Flower. Its fine craftsmanship, wonderfully sculpted flower petals, and rich symbolic meaning, all come together to form a captivating pendant. The Dogwood Flower forms a cross and has ties to the crucifixion, making it a symbol of Christianity. Optional contrasting center flower bud in yellow or rose gold to signify the blood of Jesus.",
-    metals: "Silver, Gold, Platinum",
-    sizes: 'Large (1" tall \u00d7 1.4" wide), Small (.75" tall \u00d7 .5" wide)',
-    karats: "10K, 14K, 18K, Karat Plated",
-    image: "images/Cross%20Pendants/117-326/AA.png"
-  },
-  {
-    style: "117-542",
-    name: "Gemstone Cross Pendant",
-    category: "cross-pendants",
-    subcategory: "cross",
-    description: "Pendant measures approximately 2.5 inches tall. Pictured with 29 rubies for a total weight of 2.5 carats and 25 diamonds weighing .35 carats. Can be made with any combination of gemstones.",
-    metals: "Silver, Gold, Platinum",
+    metals: "",
     sizes: "",
     karats: "",
-    image: "images/Cross%20Pendants/117-542/A.png"
+    image: "images/Cross%20Pendants/117-326/AA.png",
+    video: "https://ijewel.design/embedded?slug=11b4b1a&isAutoplay=true&isResetView=false&isPlayCameraViews=false&isPlayAnimations=false",
+    formHint: "Metal Karat, Color and Arrangement"
   },
   {
-    style: "345-452",
+    style: "330-102",
     name: "Filigree Cross Pendant",
-    category: "cross-pendants",
+    category: "religious",
     subcategory: "cross",
-    description: "Pendant measures approximately 1.5 inches tall. A beautifully crafted filigree cross pendant.",
-    metals: "Silver, Gold, Platinum",
+    description: "This beautifully crafted cross pendant is a reminder of the Savior\u2019s love woven into every detail. The frame represents the unshakable strength of God\u2019s promises, while the intricate filigree symbolizes the grace that fills and sustains every believer. Designed to be both elegant and deeply meaningful, this piece serves as a quiet testimony of faith \u2014 a way to carry the story of Christ close to your heart and let His light shine through your life. Whether worn daily or given as a gift, it speaks of devotion, hope, and the beauty of walking with Him.",
+    metals: "",
     sizes: "",
     karats: "",
-    image: "images/Cross%20Pendants/345-452/B.png"
+    image: "images/Cross%20Pendants/345-452/B.png",
+    video: "https://ijewel.design/embedded?slug=802ddc2&isAutoplay=true&isResetView=false&isPlayCameraViews=false&isPlayAnimations=false",
+    formHint: "Metal Karat, Color and Arrangement"
+  },
+  {
+    style: "530-102",
+    name: "Black & White Diamond Cross Pendant",
+    category: "religious",
+    subcategory: "cross",
+    description: "Crafted with reverence and intention, this diamond cross pendant is a radiant reminder of Christ\u2019s sacrifice and His unending love. Set with 138 handplaced diamonds \u2014 a total weight of 1.25 carats \u2014 each stone reflects the light much like the grace that covers every believer. The black and white diamonds reflect the contrast between light and darkness \u2014 a reminder of the moment when Christ overcame the shadows and hope was born. Each gemstone combination can be set to honor the majesty of a believer\u2019s faith, turning this piece into a testimony you wear, a conversation it invites, and a quiet declaration of what you believe.",
+    metals: "",
+    sizes: "",
+    karats: "",
+    image: "images/Cross%20Pendants/113-334/C.png",
+    video: "https://ijewel.design/embedded?slug=020c23e&isAutoplay=true&isResetView=false&isPlayCameraViews=false&isPlayAnimations=false",
+    formHint: "Metal Karat, Color and Gemstone Arrangement"
+  },
+  {
+    style: "330-101",
+    name: "Gemstone Cross Pendant",
+    category: "religious",
+    subcategory: "cross",
+    description: "Crafted with intention and reverence, this cross pendant features 54 gems, and can be set with any combination of gemstones, allowing every piece to become a personal expression of faith. Whether adorned with diamonds, emeralds, sapphires, or a meaningful blend of colors, this cross becomes more than jewelry. It becomes a reminder of grace, a spark for conversation, and a quiet declaration of the hope you carry.",
+    metals: "",
+    sizes: "",
+    karats: "",
+    image: "images/Cross%20Pendants/117-542/A.png",
+    video: "https://ijewel.design/embedded?slug=7391e8e&isRemoveLoadingBgImg=false&isAutoplay=true&isResetView=false&isPlayCameraViews=false&isPlayAnimations=false",
+    formHint: "Metal Karat, Color and Gemstone Arrangement"
   },
 
   // Wedding — Engagement & Bands

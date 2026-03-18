@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Gospel Necklace by Davidas Design Concepts — Wear the story that changed everything. Handcrafted in silver and gold-filled.">
+  <title>Gospel Necklace | Davidas Design Concepts</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gospel.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo"><span>D</span>avidas Design Concepts</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jewelry.html">Jewelry</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gem.html">Gem of Month</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="section" style="padding-top: calc(var(--nav-height) + var(--space-md));">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="gospel-header">
+        <h1>Gospel Necklace</h1>
+        <p>Handcrafted with meaning &mdash; Available in Silver &amp; Gold-Filled</p>
+      </div>
+
+      <!-- Product Images -->
+      <div class="gospel-images">
+        <div class="gospel-image-box" id="openViewerBtn">
+          <img src="images/Gospel_Necklace/A.png" alt="Gospel Necklace - Click to view in 3D">
+          <div class="gospel-image-label">&#9654; Click to View in 3D</div>
+        </div>
+        <div class="gospel-image-box gospel-image-box--static">
+          <img src="images/Gospel_Necklace/Model.jpg" alt="Gospel Necklace - Model View">
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="gospel-description">
+        <h2>Wear the Story That Changed Everything</h2>
+        <p>The Gospel Necklace is a beautifully crafted piece designed to do more than shine &mdash; it speaks. Every symbol on this necklace represents a chapter of the gospel of Jesus Christ, allowing you to wear and share the entire story of salvation.</p>
+
+        <h3>Each symbol reflects a moment in God&rsquo;s redemptive plan:</h3>
+        <ul class="gospel-symbols">
+          <li><strong>He Came</strong> &mdash; Jesus stepped out of heaven and became a man</li>
+          <li><strong>He Died</strong> &mdash; He gave His life on the cross to save mankind</li>
+          <li><strong>He Rose</strong> &mdash; He conquered the grave and redeemed mankind</li>
+          <li><strong>He Ascended</strong> &mdash; He returned to heaven to prepare a place for His people</li>
+          <li><strong>He Will Return</strong> &mdash; He will come again to rule and reign</li>
+        </ul>
+        <p>Together, these symbols create a powerful, elegant testimony you can wear every day.</p>
+
+        <h3>Why Women Love It</h3>
+        <ul class="gospel-features">
+          <li>A meaningful way to express and share your faith</li>
+          <li>A natural conversation starter</li>
+          <li>Lightweight, comfortable, and beautifully designed</li>
+          <li>A heartfelt gift for birthdays, baptisms, holidays, and special moments</li>
+        </ul>
+
+        <h3>A Necklace With Purpose</h3>
+        <p>When someone asks, &ldquo;What does your necklace mean?&rdquo; you have the perfect opportunity to share the greatest story ever told.</p>
+        <p><strong>The Gospel Necklace is more than jewelry &mdash; it&rsquo;s your testimony in wearable form.</strong></p>
+      </div>
+
+      <!-- Order Form -->
+      <div class="gospel-order">
+        <h2>Order Your Gospel Necklace</h2>
+        <form id="gospelForm">
+          <div class="gospel-form-row">
+            <div class="gospel-form-field">
+              <label for="gn-fname">First Name *</label>
+              <input type="text" id="gn-fname" name="firstName" required>
+            </div>
+            <div class="gospel-form-field">
+              <label for="gn-lname">Last Name *</label>
+              <input type="text" id="gn-lname" name="lastName" required>
+            </div>
+          </div>
+          <div class="gospel-form-field">
+            <label for="gn-email">Email Address *</label>
+            <input type="email" id="gn-email" name="email" required>
+          </div>
+          <div class="gospel-form-field">
+            <label for="gn-product">Product *</label>
+            <select id="gn-product" name="necklace_select" required>
+              <option value="">-- Choose Size &amp; Metal --</option>
+              <option value="Large Silver 20 Inch|199.00">Large Silver 20 Inch &mdash; $199.00</option>
+              <option value="Large Silver 18 Inch|189.00">Large Silver 18 Inch &mdash; $189.00</option>
+              <option value="Small Silver 20 Inch|179.00">Small Silver 20 Inch &mdash; $179.00</option>
+              <option value="Small Silver 18 Inch|169.00">Small Silver 18 Inch &mdash; $169.00</option>
+              <option value="Large Gold-Filled 20 Inch|244.00">Large Gold-Filled 20 Inch &mdash; $244.00</option>
+              <option value="Large Gold-Filled 18 Inch|234.00">Large Gold-Filled 18 Inch &mdash; $234.00</option>
+              <option value="Small Gold-Filled 20 Inch|220.00">Small Gold-Filled 20 Inch &mdash; $220.00</option>
+              <option value="Small Gold-Filled 18 Inch|210.00">Small Gold-Filled 18 Inch &mdash; $210.00</option>
+            </select>
+          </div>
+          <div class="gospel-price" id="gn-price" style="display:none;">
+            <span class="gospel-price__label">Your Total:</span>
+            <span class="gospel-price__amount" id="gn-price-amount">$0.00</span>
+          </div>
+          <div class="gospel-form-field">
+            <label for="gn-notes">Message</label>
+            <p class="gospel-form-hint">For multiple orders, special requests, or for 10 or 14 karat gold &mdash; please send us a message</p>
+            <textarea id="gn-notes" name="customerNotes" rows="5"></textarea>
+          </div>
+
+          <div class="gospel-form-divider">Mailing Address</div>
+
+          <div class="gospel-form-field">
+            <label for="gn-address">Address *</label>
+            <input type="text" id="gn-address" name="address1" required>
+          </div>
+          <div class="gospel-form-field gospel-form-field--short">
+            <label for="gn-apt">Apt.</label>
+            <input type="text" id="gn-apt" name="address2">
+          </div>
+          <div class="gospel-form-row">
+            <div class="gospel-form-field" style="flex:2;">
+              <label for="gn-city">City *</label>
+              <input type="text" id="gn-city" name="city" required>
+            </div>
+            <div class="gospel-form-field" style="flex:1;">
+              <label for="gn-state">State *</label>
+              <input type="text" id="gn-state" name="state" maxlength="2" required>
+            </div>
+            <div class="gospel-form-field" style="flex:1;">
+              <label for="gn-zip">ZIP *</label>
+              <input type="text" id="gn-zip" name="zip" required>
+            </div>
+          </div>
+
+          <div class="gospel-form-actions">
+            <button type="submit" class="btn btn--primary">Submit Order</button>
+            <button type="button" class="btn btn--outline" id="gn-pay-btn">Pay Now</button>
+            <button type="reset" class="btn btn--outline">Reset</button>
+          </div>
+          <div id="gn-status" class="gospel-status"></div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 3D Viewer Modal -->
+  <div class="modal-overlay" id="gn-viewer-modal" style="display:none;">
+    <div class="modal modal--viewer">
+      <button class="modal__close" id="gn-viewer-close" aria-label="Close">&times;</button>
+      <iframe id="gn-viewer-iframe" src="" allow="autoplay" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand"><span>D</span>avidas Design Concepts</div>
+          <p class="footer__tagline">The fusion of art, craftsmanship and technology. Custom jewelry design in Greensboro, NC since 1995.</p>
+        </div>
+        <div>
+          <div class="footer__heading">Explore</div>
+          <ul class="footer__links">
+            <li><a href="jewelry.html">Jewelry</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gem.html">Gem of Month</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Company</div>
+          <ul class="footer__links">
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__heading">Contact</div>
+          <ul class="footer__links">
+            <li><a href="tel:+13367908214">(336) 790-8214</a></li>
+            <li><a href="mailto:info@davidas.com">info@davidas.com</a></li>
+            <li><span style="color: var(--color-text-dim); font-size: 0.9rem;">220 S. Swing Rd, Unit #1<br>Greensboro, NC 27409</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 Davidas Design Concepts. All rights reserved.</span>
+        <span>Est. July 8, 1995</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gospel.js"></script>
+</body>
+</html>

@@ -218,32 +218,25 @@
         "</span></div>";
     }
 
+    var imageHtml =
+      '<div class="product-detail__image">' +
+      '<img src="' + p.image + '" alt="' + escapeHtml(p.name) + '">' +
+      (p.video ? '<button class="product-detail__3d-btn" data-video>&#9654; Click to View in 3D</button>' : '') +
+      '</div>';
+
+    var pricingHtml =
+      '<a href="#inquiry/' + p.style + '" class="btn btn--primary product-detail__pricing-btn" data-inquiry="' + p.style + '">Click For Pricing</a>';
+
     detail.innerHTML =
-      '<div class="product-detail__image"><img src="' +
-      p.image +
-      '" alt="' +
-      escapeHtml(p.name) +
-      '"></div>' +
+      imageHtml +
       '<div class="product-detail__info">' +
-      '<h2 class="product-detail__name">' +
-      escapeHtml(p.name) +
-      "</h2>" +
+      '<h2 class="product-detail__name">' + escapeHtml(p.name) + "</h2>" +
       '<div class="product-detail__style-row">' +
-      '<a href="#inquiry/' +
-      p.style +
-      '" class="product-detail__style" data-inquiry="' +
-      p.style +
-      '">Style #' +
-      p.style +
-      "</a>" +
-      '<span class="product-detail__pricing-hint">(Click Style # For Pricing)</span>' +
+      '<span class="product-detail__style-label">Style #' + p.style + '</span>' +
       "</div>" +
-      '<p class="product-detail__desc">' +
-      escapeHtml(p.description) +
-      "</p>" +
-      (specsHtml
-        ? '<div class="product-detail__specs">' + specsHtml + "</div>"
-        : "") +
+      pricingHtml +
+      '<p class="product-detail__desc">' + escapeHtml(p.description) + "</p>" +
+      (specsHtml ? '<div class="product-detail__specs">' + specsHtml + "</div>" : "") +
       '<a href="#" class="product-detail__back" data-back>&larr; Return</a>' +
       "</div>";
 
@@ -251,7 +244,7 @@
       .querySelector("[data-inquiry]")
       .addEventListener("click", function (e) {
         e.preventDefault();
-        openInquiry(p.style);
+        openInquiry(p.style, p.formHint);
       });
 
     detail
@@ -261,21 +254,59 @@
         showGrid(p.category, p.subcategory);
       });
 
+    var vidBtn = detail.querySelector("[data-video]");
+    if (vidBtn) {
+      vidBtn.addEventListener("click", function () {
+        open3DViewer(p.video, p.name);
+      });
+    }
+
     showView("detail");
     history.pushState(null, "", "#product/" + p.style);
   }
 
   // ── View 4: Inquiry Modal ──
 
-  function openInquiry(style) {
+  function openInquiry(style, customHint) {
     document.getElementById("modal-style").textContent = style;
     document.getElementById("inq-style").value = style;
     document.getElementById("inq-fname").value = "";
     document.getElementById("inq-lname").value = "";
     document.getElementById("inq-email").value = "";
     document.getElementById("inq-message").value = "";
+    var hintEl = document.getElementById("inq-hint");
+    if (hintEl) {
+      hintEl.textContent = customHint || "Metal, Karat & Color, and if you have stones or stone choice";
+    }
     modal.style.display = "";
     document.body.style.overflow = "hidden";
+  }
+
+  // ── 3D Viewer Modal ──
+
+  function open3DViewer(url, title) {
+    var viewer = document.getElementById("viewer-modal");
+    var iframe = document.getElementById("viewer-iframe");
+    iframe.src = url;
+    iframe.title = title || "3D View";
+    viewer.style.display = "";
+    document.body.style.overflow = "hidden";
+  }
+
+  function close3DViewer() {
+    var viewer = document.getElementById("viewer-modal");
+    var iframe = document.getElementById("viewer-iframe");
+    viewer.style.display = "none";
+    iframe.src = "";
+    document.body.style.overflow = "";
+  }
+
+  var viewerModal = document.getElementById("viewer-modal");
+  if (viewerModal) {
+    document.getElementById("viewer-close").addEventListener("click", close3DViewer);
+    viewerModal.addEventListener("click", function (e) {
+      if (e.target === viewerModal) close3DViewer();
+    });
   }
 
   function closeInquiry() {
@@ -306,6 +337,10 @@
   // ── Routing ──
 
   function navigateTo(catId, subId) {
+    if (catId === "religious" && subId === "gospel-necklace") {
+      window.location.href = "gospel-necklace.html";
+      return;
+    }
     showGrid(catId, subId);
   }
 
@@ -343,6 +378,10 @@
 
     const parts = hash.split("/");
     if (parts.length === 2) {
+      if (parts[0] === "religious" && parts[1] === "gospel-necklace") {
+        window.location.href = "gospel-necklace.html";
+        return;
+      }
       showGrid(parts[0], parts[1]);
       return;
     }

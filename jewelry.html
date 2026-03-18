@@ -95,7 +95,7 @@
         </div>
         <div class="inquiry-form__field">
           <label for="inq-message">Tell us any changes you want made:</label>
-          <p class="inquiry-form__hint">Metal, Karat &amp; Color, and if you have stones or stone choice</p>
+          <p class="inquiry-form__hint" id="inq-hint">Metal, Karat &amp; Color, and if you have stones or stone choice</p>
           <textarea id="inq-message" name="message" rows="5"></textarea>
         </div>
         <div class="inquiry-form__actions">
@@ -103,6 +103,14 @@
           <button type="reset" class="btn btn--outline">Reset</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- 3D Viewer Modal -->
+  <div class="modal-overlay" id="viewer-modal" style="display:none;">
+    <div class="modal modal--viewer">
+      <button class="modal__close" id="viewer-close" aria-label="Close">&times;</button>
+      <iframe id="viewer-iframe" src="" allow="autoplay" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -136,7 +144,7 @@
           <ul class="footer__links">
             <li><a href="tel:+13367908214">(336) 790-8214</a></li>
             <li><a href="mailto:info@davidas.com">info@davidas.com</a></li>
-            <li><span style="color: var(--color-text-dim); font-size: 0.9rem;">4929 W Market St, Ste 2124<br>Greensboro, NC 27407</span></li>
+            <li><span style="color: var(--color-text-dim); font-size: 0.9rem;">220 S. Swing Rd, Unit #1<br>Greensboro, NC 27409</span></li>
           </ul>
         </div>
       </div>
