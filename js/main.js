@@ -78,6 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Gem Read More toggle
+  const gemToggle = document.getElementById('gem-toggle');
+  const gemMore = document.getElementById('gem-read-more');
+  if (gemToggle && gemMore) {
+    gemToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = gemMore.classList.toggle('expanded');
+      gemToggle.textContent = isExpanded ? 'Read Less' : 'Read More';
+    });
+  }
+
   // Contact form
   const form = document.querySelector('.contact-form');
   if (form) {
