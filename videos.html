@@ -40,63 +40,80 @@
   <section class="section reveal">
     <div class="container">
       <div class="video-grid" data-stagger>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/cad/eh5v.files/html5video/Cad.m4v" data-video-title="CAD Design">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/CAD.png" alt="CAD Design video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">CAD Design</h3>
+            <p class="video-card__desc">Designing a ring on computer</p>
           </div>
         </article>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/repair/eh5v.files/html5video/Jewelry_Repair.m4v" data-video-title="Jewelry Repair">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/Jewelry%20Repair.png" alt="Jewelry Repair video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">Jewelry Repair</h3>
+            <p class="video-card__desc">Expert repair techniques</p>
           </div>
         </article>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/restring/eh5v.files/html5video/Pearl_Restringing.m4v" data-video-title="Pearl Restringing">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/Pearl%20Restringing.png" alt="Pearl Restringing video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">Pearl Restringing</h3>
+            <p class="video-card__desc">Re-stringing pearls and beads</p>
           </div>
         </article>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/Engraving/eh5v.files/html5video/Engraving_Video.m4v" data-video-title="Engraving">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/Engraving.png" alt="Engraving video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">Engraving</h3>
+            <p class="video-card__desc">Computer-aided engraving</p>
           </div>
         </article>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/wax_carving/eh5v.files/html5video/Wax_Carving.m4v" data-video-title="Wax Carving">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/Wax%20Carving.jpg" alt="Wax Carving video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">Wax Carving</h3>
+            <p class="video-card__desc">Hand-carved wax models</p>
           </div>
         </article>
-        <article class="video-card">
+        <article class="video-card" data-video-src="http://davidas.com/Video/Digitizing/eh5v.files/html5video/Digitizing.m4v" data-video-title="Digitizing">
           <div class="video-card__thumb">
             <img src="images/Video_Thumbs/Digitizing.jpg" alt="Digitizing video thumbnail">
             <div class="video-card__play" aria-hidden="true"></div>
           </div>
           <div class="video-card__body">
             <h3 class="video-card__title">Digitizing</h3>
+            <p class="video-card__desc">Logo digitizing process</p>
           </div>
         </article>
       </div>
     </div>
   </section>
+
+  <!-- Video Player Modal -->
+  <div class="modal-overlay" id="video-modal" style="display:none;">
+    <div class="modal modal--video">
+      <button class="modal__close" id="video-modal-close" aria-label="Close">&times;</button>
+      <h3 class="modal__title" id="video-modal-title"></h3>
+      <video id="video-player" controls preload="metadata" playsinline>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

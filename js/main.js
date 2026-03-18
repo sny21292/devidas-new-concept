@@ -105,4 +105,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3000);
     });
   }
+
+  // Video modal player
+  const videoModal = document.getElementById('video-modal');
+  const videoPlayer = document.getElementById('video-player');
+  const videoTitle = document.getElementById('video-modal-title');
+
+  if (videoModal && videoPlayer) {
+    document.querySelectorAll('.video-card[data-video-src]').forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-video-src');
+        const title = card.getAttribute('data-video-title') || '';
+        videoTitle.textContent = title;
+        videoPlayer.src = src;
+        videoModal.style.display = '';
+        document.body.style.overflow = 'hidden';
+        videoPlayer.play().catch(() => {});
+      });
+    });
+
+    function closeVideoModal() {
+      videoModal.style.display = 'none';
+      videoPlayer.pause();
+      videoPlayer.removeAttribute('src');
+      videoPlayer.load();
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('video-modal-close').addEventListener('click', closeVideoModal);
+    videoModal.addEventListener('click', e => {
+      if (e.target === videoModal) closeVideoModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && videoModal.style.display !== 'none') closeVideoModal();
+    });
+  }
 });
